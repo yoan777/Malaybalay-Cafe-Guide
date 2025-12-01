@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.CSS">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="icon.png" />
+  <title>Malaybalay Cafe Guide</title>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">MBC</div>
+    <div>
+      <h1>Malaybalay Cafe Guide</h1>
+      <p class="lead">
+        A warm, brown-aesthetic guide to the best cafes in Malaybalay — locations,
+        reviews, best orders, and vibes.
+      </p>
+    </div>
+  </header>
+
+  <!-- SEARCH & FILTER -->
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search cafe or order" />
+    <select id="filter">
+      <option value="all">All vibes</option>
+      <option value="cozy">Cozy</option>
+      <option value="modern">Modern</option>
+      <option value="outdoors">Outdoors</option>
+    </select>
+    <button class="btn" id="apply">Apply</button>
+
+    <div style="margin-left:auto;color:var(--muted);font-size:13px">
+      Showing <span id="count">0</span> cafes
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid" id="grid">
+
+    <div id="no-results" style="display:none; text-align:center; margin-top:30px; color:var(--muted); font-size:18px;">
+      ☕ No cafes match your search... try another vibe or keyword 😭
+    </div>
+
+    <!-- CARD 1 -->
+    <article class="card" data-vibe="cozy">
+      <div class="media" style="background-image:url('beanzone.jpg');">
+        <div class="tag">Cozy • Local</div>
+      </div>
+
+      <div class="body">
+        <div class="more-info">
+          <h4>Today's Status</h4>
+          <p class="open-status">Open today: 9:00 AM – 8:00 PM</p>
+
+          <h4>Gallery</h4>
+          <div class="gallery">
+            <div class="img-box"><img src="beanseller1.jpg"></div>
+            <div class="img-box"><img src="beanseller2.jpg"></div>
+          </div>
+
+          <h4>Contact</h4>
+          <p>Phone: 0912 345 6789</p>
+        </div>
+
+        <h3 class="title">Beanzone Cafe</h3>
+        <div class="meta">44VF+PFR, Malaybalay City, Bukidnon</div>
+        <p class="desc">A tiny, warm cafe with wooden tables, local pastries, and walkable area to the local park.</p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/p/BEAN-ZONE-CAFE-100092837180237" target="_blank" class="social-btn facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://www.google.com/maps?q=Bean+Zone+Malaybalay" target="_blank" class="location-btn googlemaps">
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="pill">Top order: Barako Latte</div>
+          <div class="pill">Wi-Fi</div>
+          <div class="rating-wrap">
+            <div class="rating-star"></div>
+            <span class="rating-number">4.6</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card" data-vibe="modern">
+      <div class="media" style="background-image:url('mc2.jpg');">
+        <div class="tag">Modern • Workspace</div>
+      </div>
+
+      <div class="body">
+        <div class="more-info">
+          <h4>Today's Status</h4>
+          <p class="open-status">Open Daily: 9:00 AM – 8:00 PM</p>
+
+          <h4>Gallery</h4>
+          <div class="gallery">
+            <div class="img-box"><img src="best sellers.jpg"></div>
+            <div class="img-box"><img src="best sellers2.jpg"></div>
+          </div>
+
+          <h4>Contact</h4>
+          <p>Phone: 0912 345 6789</p>
+        </div>
+
+        <h3 class="title">E=mc2</h3>
+        <div class="meta">Pimentel St. (Kanto Dos), Malaybalay</div>
+        <p class="desc">Bright space with minimalist interiors, power outlets on every table, and specialty single-origin brews.</p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/emc2malaybalay" target="_blank" class="social-btn facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://www.google.com/maps?q=Malaybalay+City+Coffee+Pimentel" target="_blank" class="location-btn googlemaps">
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="pill">Top order: Cold Brew</div>
+          <div class="pill">Outlet Friendly</div>
+          <div class="rating-wrap">
+            <div class="rating-star"></div>
+            <span class="rating-number">4.4</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="card" data-vibe="outdoors">
+      <div class="media" style="background-image:url('cofgwaon.jpg');">
+        <div class="tag">Outdoors • Scenic</div>
+      </div>
+
+      <div class="body">
+        <div class="more-info">
+          <h4>Today's Status</h4>
+          <p class="open-status">Open today: 9:00 AM – 8:00 PM</p>
+
+          <h4>Gallery</h4>
+          <div class="gallery">
+            <div class="img-box"><img src="wagonseller.jpg"></div>
+            <div class="img-box"><img src="wagonseller2.jpg"></div>
+          </div>
+
+          <h4>Contact</h4>
+          <p>Phone: 0912 345 6789</p>
+        </div>
+
+        <h3 class="title">Coffee Wagon</h3>
+        <div class="meta">San Isidro St., Crossing Carbajal St., Barangay 8, Malaybalay City</div>
+        <p class="desc">Cozy, warmly lit café with rustic wood accents and a relaxed ambiance.</p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/p/Coffee-Wagon-100067517581603" target="_blank" class="social-btn facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://www.google.com/maps?q=Coffee+Wagon+Malaybalay" target="_blank" class="location-btn googlemaps">
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="pill">Top order: Iced Cacao</div>
+          <div class="pill">Pet Friendly</div>
+          <div class="rating-wrap">
+            <div class="rating-star"></div>
+            <span class="rating-number">4.4</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="card" data-vibe="modern">
+      <div class="media" style="background-image:url('the bbc.jpg');">
+        <div class="tag">Cozy • Workspace</div>
+      </div>
+
+      <div class="body">
+        <div class="more-info">
+          <h4>Today's Status</h4>
+          <p class="open-status">Open Monday to Saturday: 9:00 AM – 8:00 PM</p>
+
+          <h4>Gallery</h4>
+          <div class="gallery">
+            <div class="img-box"><img src="bbcseller1.jpg"></div>
+            <div class="img-box"><img src="bbcseller2.jpg"></div>
+          </div>
+
+          <h4>Contact</h4>
+          <p>Phone: 0912 345 6789</p>
+        </div>
+
+        <h3 class="title">Bukidnon Brew Cafe</h3>
+        <div class="meta">545H+2VG, Malaybalay</div>
+        <p class="desc">If you're looking for a place to relax from the Bukidnon heat, this is the spot.</p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/bukidnonbrew/" target="_blank" class="social-btn facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://www.google.com/maps?q=Bukidnon+Brew+Cafe+Malaybalay" target="_blank" class="location-btn googlemaps">
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="pill">Top order: Churros</div>
+          <div class="pill">Chika Zone</div>
+          <div class="rating-wrap">
+            <div class="rating-star"></div>
+            <span class="rating-number">4.2</span>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article class="card" data-vibe="modern">
+      <div class="media" style="background-image:url('delreyuos.JPG');">
+        <div class="tag">Modern • Local</div>
+      </div>
+
+      <div class="body">
+        <div class="more-info">
+          <h4>Today's Status</h4>
+          <p class="open-status">Open today: 9:00 AM – 8:00 PM</p>
+
+          <h4>Gallery</h4>
+          <div class="gallery">
+            <div class="img-box"><img src="delseller1.jpg"></div>
+            <div class="img-box"><img src="delseller2.jpg"></div>
+          </div>
+
+          <h4>Contact</h4>
+          <p>Phone: 0912 345 6789</p>
+        </div>
+
+        <h3 class="title">Del Rio's</h3>
+        <div class="meta">Magsaysay St., Barangay 2, Malaybalay City</div>
+        <p class="desc">A cozy pit stop featuring wooden decor, in a quiet and cozy suburb.</p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/Del-Rios-Cafe-100031660676241/" target="_blank" class="social-btn facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://www.google.com/maps?q=Del+Rio%27s+Cafe+Malaybalay" target="_blank" class="location-btn googlemaps">
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="pill">Top order: Crêpes</div>
+          <div class="pill">Aesthetic & Pet Friendly</div>
+          <div class="rating-wrap">
+            <div class="rating-star"></div>
+            <span class="rating-number">4.0</span>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- CARD 6 -->
+    <article class="card" data-vibe="modern">
+      <div class="media" style="background-image:url('Degrees.jpg');">
+        <div class="tag">Modern • Local</div>
+      </div>
+
+      <div class="body">
+        <div class="more-info">
+          <h4>Today's Status</h4>
+          <p class="open-status">Open today: 9:00 AM – 8:00 PM</p>
+
+          <h4>Gallery</h4>
+          <div class="gallery">
+            <div class="img-box"><img src="degreeseller.jpg"></div>
+            <div class="img-box"><img src="degreeseller2.jpg"></div>
+          </div>
+
+          <h4>Contact</h4>
+          <p>Phone: 0912 345 6789</p>
+        </div>
+
+        <h3 class="title">Degrees</h3>
+        <div class="meta">Rancheros Bldng. Fortich St., Malaybalay</div>
+        <p class="desc">
+          A warm, rustic hideaway with a handcrafted vibe—perfect for laid-back drinks and quiet conversations.
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/degreesmilkteamalaybalay/" target="_blank" class="social-btn facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://www.google.com/maps?q=Degrees+Milk+Tea+Malaybalay" target="_blank" class="location-btn googlemaps">
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="pill">Top order: Nutella Oreo Milk Tea</div>
+          <div class="pill">Aesthetic</div>
+          <div class="rating-wrap">
+            <div class="rating-star"></div>
+            <span class="rating-number">4.0</span>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+
+  <div class="mountain">— Malaybalay • Mountain-city Cafes —</div>
+
+  <footer>Tips:</footer>
+
+  <!-- Search / Filter Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const searchInput = document.getElementById("q");
+      const filterSelect = document.getElementById("filter");
+      const applyBtn = document.getElementById("apply");
+      const cards = document.querySelectorAll(".card");
+      const countDisplay = document.getElementById("count");
+      const noResults = document.getElementById("no-results");
+
+      function filterCafes() {
+        const searchText = searchInput.value.toLowerCase();
+        const vibeValue = filterSelect.value;
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const title = card.querySelector(".title").textContent.toLowerCase();
+          const description = card.querySelector(".desc").textContent.toLowerCase();
+          const vibe = card.getAttribute("data-vibe");
+
+          const matchesSearch = title.includes(searchText) || description.includes(searchText);
+          const matchesVibe = vibeValue === "all" || vibe === vibeValue;
+
+          if (matchesSearch && matchesVibe) {
+            card.style.display = "block";
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        countDisplay.textContent = visibleCount;
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+
+      applyBtn.addEventListener("click", filterCafes);
+      searchInput.addEventListener("input", filterCafes);
+      filterCafes();
+    });
+  </script>
+
+  <!-- Expand Card Script -->
+  <script>
+    document.addEventListener("click", (e) => {
+      const card = e.target.closest(".card");
+      if (!card) return;
+
+      card.classList.toggle("expanded");
+
+      document.querySelectorAll(".card.expanded").forEach(other => {
+        if (other !== card) other.classList.remove("expanded");
+      });
+    });
+  </script>
+
+</div>
+</body>
+</html>

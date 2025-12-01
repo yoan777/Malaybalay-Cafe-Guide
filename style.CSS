@@ -1,0 +1,245 @@
+  /* ---------- Theme Variables ---------- */
+  :root{
+    --bg:#2b1609;            
+    --paper:#f6efe8;         
+    --accent:#8b5e3c;        
+    --muted:#a88b72;        
+    --forest:#274734;        
+    --card:#3b2a21;          
+    --glass: rgba(255,255,255,0.06);
+    --radius:12px;
+    --shadow: 0 6px 18px rgba(15,10,6,0.45);
+    font-family: 'Segoe UI', Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  }
+
+  /* ---------- Global Reset ---------- */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background: linear-gradient(180deg, var(--bg) 0%, #281507 60%);
+    color:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:28px;
+    line-height:1.45;
+  }
+
+  /* ---------- Container ---------- */
+  .container{
+    max-width:1100px;
+    margin:0 auto;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:18px;
+    padding:28px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(255,255,255,0.03);
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    margin-bottom:18px;
+  }
+
+  .logo{
+    width:76px;height:76px;
+    border-radius:14px;
+    background: linear-gradient(135deg,var(--accent), #5a3e2c);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+    border:1px solid rgba(255,255,255,0.04);
+    font-weight:700;
+    font-size:20px;
+    color:var(--paper);
+  }
+
+  h1{font-size:26px;margin:0}
+  p.lead{margin:4px 0 0;color:var(--muted)}
+
+  /* ---------- Controls ---------- */
+  .controls{
+    display:flex;gap:12px;margin:18px 0 24px;align-items:center;flex-wrap:wrap
+  }
+
+  input[type="search"], select{
+    padding:10px 12px;border-radius:10px;border:1px solid rgba(0, 0, 0, 0.04);
+    background:var(--glass);color:var(--paper);outline:none;min-width:160px
+  }
+
+  button.btn{
+    padding:10px 14px;border-radius:10px;border:0;background:var(--accent);color:var(--paper);cursor:pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  }
+
+  /* ---------- FIXED GRID (no more empty gaps) ---------- */
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);  /* always 3 columns */
+    align-items: start;
+  }
+  /* ---------- Cards with equal height & controlled expansion ---------- */
+  .card{
+    position: relative;
+    overflow: hidden;
+    background:linear-gradient(180deg, var(--card), rgba(0,0,0,0.45));
+    border-radius:var(--radius);
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.03);
+    box-shadow:0 8px 20px rgba(0,0,0,0.45);
+    transition: transform .18s ease, box-shadow .18s ease;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.55)}
+
+  /* ---------- Image Banner ---------- */
+  .card .media{
+    height:160px;background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
+    display:flex;align-items:flex-end;padding:12px;color:var(--paper);
+    background-size:cover;background-position:center;
+  }
+
+  .card .media .tag{
+    background:rgba(0,0,0,0.35);padding:6px 10px;border-radius:10px;font-size:13px
+  }
+
+  /* ---------- Content ---------- */
+  .card .body{
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+  }
+
+  .title{font-weight:700;margin:0 0 6px}
+  .meta{font-size:13px;color:var(--muted);margin-bottom:10px}
+  .desc{font-size:14px;margin-bottom:12px;color:var(--paper);opacity:0.95}
+
+  /* ---------- Tags ---------- */
+  .row{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    margin-top:auto;
+  }
+
+  .pill{
+    padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);font-size:13px;border:1px solid rgba(255,255,255,0.02)
+  }
+
+  /* ---------- Rating ---------- */
+  .rating-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .rating-star {
+    width: 20px;
+    height: 20px;
+    background: #d6b463;
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 
+      68% 57%, 79% 91%, 50% 70%, 
+      21% 91%, 32% 57%, 2% 35%, 
+      39% 35%
+    );
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.35);
+  }
+
+  .rating-number {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--paper);
+    opacity: 0.9;
+  }
+
+  /* ---------- Expandable Info ---------- */
+  /* ---------- Expandable Info (Smooth but Controlled) ---------- */
+  .more-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .25s ease;
+  opacity: 0;
+}
+
+.card.expanded .more-info {
+  max-height: 450px;
+  opacity: 1;
+}
+
+
+  /* ---------- Gallery ---------- */
+  .more-info .gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .more-info .gallery img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+  /* ---------- Decorative Mountain ---------- */
+  .mountain{
+    height:56px;margin-top:14px;border-radius:10px;background:linear-gradient(180deg,var(--forest), #2b3b2e);
+    display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--paper);opacity:0.12
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:480px){
+    header{flex-direction:column;align-items:flex-start}
+    .logo{width:64px;height:64px}
+  }
+
+  /* ---------- Printable ---------- */
+  .compact{background:var(--paper);color:#2b1609;padding:12px;border-radius:8px}
+
+  /* ---------- Social Links (Facebook + Maps) ---------- */
+  .social-links {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 14px;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: var(--paper);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.2s ease;
+  }
+
+  .social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+  }
+
+  /* Icon Colors */
+  .facebook {
+    background: #1877F2;
+  }
+
+  .googlemaps {
+    background: #DB4437;
+  }
